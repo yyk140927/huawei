@@ -18,16 +18,325 @@ var Switch = {
         })
     },
     readBanner(res){
+        //轮播图渲染
         let str = ""
         res.slideImg.forEach(item => {
             str = `url(${item.src})`
             let index = item.index
             $(".wrap li").eq(index).css("background-image",str)
         })
+        //热销单品渲染
+        let strHot = ""
+        res.hotGoods.forEach(item => {
+            strHot +=  `
+                        <li class="grid-items">
+                            <a href="javascript:;" class="thumb">
+                                <p class="grid-img"><img src="${item.img}" alt=""></p>
+                                <div class="grid-title">${item.title}</div>
+                                <p class="grid-desc">${item.desc}</p>
+                                <p class="grid-price">${item.price}</p>
+                            </a>
+                        </li>
+                    `
+        })
+        $("#hotgoods").html(strHot)
+        //推荐商品渲染
+        let strRec = ""
+        res.recommendGoods.forEach(item => {
+            strRec +=  `
+                        <li class="grid-items">
+                            <a href="javascript:;" class="thumb">
+                                <div class="grid-info">
+                                    <p class="grid-img"><img src="${item.img}" alt=""></p>
+                                    <p class="grid-desc">${item.desc}</p>
+                                </div>
+                                <div class="grid-title">${item.title}</div>
+                                <p class="grid-price">${item.price}</p>
+                            </a>
+                        </li>
+                    `
+        })
+        $("#recommendgoods").html(strRec)
+        //手机渲染
+        let strPhone = ""
+        res.phone.forEach(item => {
+            if( item.p ){
+                strPhone += `
+                            <li class="grid-items grid-items-md">
+                                <a href="javascript:;">
+                                    <img src="${item.p}" alt="">
+                                </a>
+                            </li>
+                        `
+            }else{
+                strPhone += `
+                            <li class="grid-items">
+                                <a href="javascript:;" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                        <div class="grid-title">${item.title}</div>
+                                        <p class="grid-desc">${item.desc}</p>
+                                        <p class="grid-price"><span>${item.price}</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        `
+            }
+        })
+        $("#cellphone").html(strPhone)
+        //笔记本渲染
+        let strNotebook = ""
+        res.notebook.forEach(item => {
+            if( item.n ){
+                strNotebook += `
+                                <li class="grid-items grid-items-md">
+                                    <a href="javascript:;">
+                                        <img src="${item.n}" alt="">
+                                    </a>
+                                </li>
+                            `
+            }else{
+                strNotebook +=  `
+                                <li class="grid-items">
+                                    <a href="javascript:;" class="thumb">
+                                        <div class="grid-info">
+                                            <p class="grid-img">
+                                                <img src="${item.img}" alt="">
+                                            </p>
+                                            <div class="grid-title">${item.title}</div>
+                                            <p class="grid-desc">${item.desc}</p>
+                                            <p class="grid-price"><span>${item.price}</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            `
+            }
+        })
+        $("#note").html(strNotebook)
+        //平板渲染
+        let strTablets = ""
+        res.tablets.forEach(item => {
+            if( item.t ){
+                strTablets += `
+                                <li class="grid-items grid-items-md">
+                                    <a href="javascript:;">
+                                        <img src="${item.t}" alt="">
+                                    </a>
+                                </li>
+                            `
+            }else{
+                strTablets +=  `
+                                <li class="grid-items">
+                                    <a href="javascript:;" class="thumb">
+                                        <div class="grid-info">
+                                            <p class="grid-img">
+                                                <img src="${item.img}" alt="">
+                                            </p>
+                                            <div class="grid-title">${item.title}</div>
+                                            <p class="grid-desc">${item.desc}</p>
+                                            <p class="grid-price"><span>${item.price}</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            `
+            }
+        })
+        $("#tabletsPC").html(strTablets)
+        // 智能穿戴
+        let strWear = ""
+        res.wear.forEach(item => {
+            if( item.w ){
+                strWear += `
+                            <li class="grid-items grid-items-lg">
+                                <a href="" class="thumb">
+                                    <img src="${item.w}" alt="">
+                                </a>
+                            </li>
+                        `
+            }else{
+                strWear += `
+                            <li class="grid-items">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                        <div class="grid-title">${item.title}</div>
+                                        <p class="grid-desc">${item.desc}</p>
+                                        <p class="grid-price"><span>${item.price}</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        `
+            }
+        })
+        $("#smartwear").html(strWear)
+        let strWear_6 = ""
+        res.wear_6.forEach(item => {
+            strWear_6 += `
+                            <li class="grid-items swiper-slide swiper-slide-visible">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="grid-title">${item.title}</div>
+                                    <p class="grid-desc">${item.desc}</p>
+                                    <p class="grid-price"><span>${item.price}</span></p>
+                                </a>
+                            </li>
+                        `
+        })
+        $("#smartwear-6").html(strWear_6)
+        // 智能家居
+        let strHome = ""
+        res.home.forEach(item => {
+            if( item.h ){
+                strHome += `
+                            <li class="grid-items grid-items-lg">
+                                <a href="" class="thumb">
+                                    <img src="${item.h}" alt="">
+                                </a>
+                            </li>
+                        `
+            }else{
+                strHome += `
+                            <li class="grid-items">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                        <div class="grid-title">${item.title}</div>
+                                        <p class="grid-desc">${item.desc}</p>
+                                        <p class="grid-price"><span>${item.price}</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        `
+            }
+        })
+        $("#smarthome").html(strHome)
+        let strHome_6 = ""
+        res.home_6.forEach(item => {
+            strHome_6 += `
+                            <li class="grid-items swiper-slide swiper-slide-visible">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="grid-title">${item.title}</div>
+                                    <p class="grid-desc">${item.desc}</p>
+                                    <p class="grid-price"><span>${item.price}</span></p>
+                                </a>
+                            </li>
+                        `
+        })
+        $("#smarthome-6").html(strHome_6)
+        // 热销配件
+        let strParts = ""
+        res.parts.forEach(item => {
+            if( item.p ){
+                strParts += `
+                            <li class="grid-items grid-items-lg">
+                                <a href="" class="thumb">
+                                    <img src="${item.p}" alt="">
+                                </a>
+                            </li>
+                        `
+            }else{
+                strParts += `
+                            <li class="grid-items">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                        <div class="grid-title">${item.title}</div>
+                                        <p class="grid-desc">${item.desc}</p>
+                                        <p class="grid-price"><span>${item.price}</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        `
+            }
+        })
+        $("#hotparts").html(strParts)
+        let strParts_6 = ""
+        res.parts_6.forEach(item => {
+            strParts_6 += `
+                            <li class="grid-items swiper-slide swiper-slide-visible">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="grid-title">${item.title}</div>
+                                    <p class="grid-desc">${item.desc}</p>
+                                    <p class="grid-price"><span>${item.price}</span></p>
+                                </a>
+                            </li>
+                        `
+        })
+        $("#hotparts-6").html(strParts_6)
+        // 品牌配件
+        let strBrandParts = ""
+        res.brandparts.forEach(item => {
+            if( item.b ){
+                strBrandParts += `
+                            <li class="grid-items grid-items-lg">
+                                <a href="" class="thumb">
+                                    <img src="${item.b}" alt="">
+                                </a>
+                            </li>
+                        `
+            }else{
+                strBrandParts += `
+                            <li class="grid-items">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                        <div class="grid-title">${item.title}</div>
+                                        <p class="grid-desc">${item.desc}</p>
+                                        <p class="grid-price"><span>${item.price}</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        `
+            }
+        })
+        $("#brandparts").html(strBrandParts)
+        let strBrandParts_6 = ""
+        res.brandparts_6.forEach(item => {
+            strBrandParts_6 += `
+                            <li class="grid-items swiper-slide swiper-slide-visible">
+                                <a href="" class="thumb">
+                                    <div class="grid-info">
+                                        <p class="grid-img">
+                                            <img src="${item.img}" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="grid-title">${item.title}</div>
+                                    <p class="grid-desc">${item.desc}</p>
+                                    <p class="grid-price"><span>${item.price}</span></p>
+                                </a>
+                            </li>
+                        `
+        })
+        $("#brandparts-6").html(strBrandParts_6)
     }
 }
+
 function slide(){
-    var index = 0;    
+    var index = 0; 
     // 选中所有的图片;
     var prve_index = 0;
     //图片
@@ -108,3 +417,7 @@ function slide(){
 }
 
 // 以上是轮播图
+
+
+
+
