@@ -411,12 +411,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 1349px;
 }
 .slide {
+    background: 50% 0px no-repeat;
     width: 100%;
     height: 550px;
     position: absolute;
     display: none;
+    
 }
-.slide:nth-of-type(1){
+/* .slide:nth-of-type(1){
     background: url(https://res.vmallres.com/pimages//sale/2018-12/JI7fgJ9EcFbZp3bUCoEH.jpg) 50% 0px no-repeat;
 }
 .slide:nth-of-type(2){
@@ -442,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .slide:nth-of-type(9){
     background: url(https://res.vmallres.com/pimages//sale/2018-12/URBtaE7FEudBmtavDEak.jpg) 50% 0px no-repeat;
-}
+} */
 .slide-show{
     z-index: 2;
 }
