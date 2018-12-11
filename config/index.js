@@ -42,12 +42,12 @@ const config = {
         //         './src/views/login/stylesheets/*.css'
         //     ]
         // },
-        // 'register': { 
-        //     'register': [
-        //         './src/stylesheets/reset.css',
-        //         './src/views/register/stylesheets/*.css'
-        //     ]
-        // },
+        'register': { 
+            'register': [
+                './src/stylesheets/reset.css',
+                './src/views/register/stylesheets/*.css'
+            ]
+        },
         // 'details': {
         //     'details': [
         //         './src/stylesheets/reset.css',
@@ -58,7 +58,7 @@ const config = {
     jsoptions: {// js配置
         'index': './src/views/index/javascripts/index.js',
         // 'list': './src/views/list/javascripts/list.js',
-        // 'register': './src/views/register/javascripts/register.js',
+        'register': './src/views/register/javascripts/register.js',
         // 'login': './src/views/login/javascripts/login.js',
         // 'details': './src/views/details/javascripts/details.js',
         // 'shopcar': './src/views/shopcar/javascripts/shopcar.js',
