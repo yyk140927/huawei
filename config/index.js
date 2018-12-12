@@ -36,12 +36,12 @@ const config = {
         //         './src/views/shopcar/stylesheets/*.css'
         //     ]
         // },
-        // 'login': {
-        //     'login': [
-        //         './src/stylesheets/reset.css',
-        //         './src/views/login/stylesheets/*.css'
-        //     ]
-        // },
+        'login': {
+            'login': [
+                './src/stylesheets/reset.css',
+                './src/views/login/stylesheets/*.css'
+            ]
+        },
         'register': { 
             'register': [
                 './src/stylesheets/reset.css',
@@ -59,7 +59,7 @@ const config = {
         'index': './src/views/index/javascripts/index.js',
         // 'list': './src/views/list/javascripts/list.js',
         'register': './src/views/register/javascripts/register.js',
-        // 'login': './src/views/login/javascripts/login.js',
+        'login': './src/views/login/javascripts/login.js',
         // 'details': './src/views/details/javascripts/details.js',
         // 'shopcar': './src/views/shopcar/javascripts/shopcar.js',
     }
