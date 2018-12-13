@@ -1,0 +1,672 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+.layout {
+    /* *zoom: 1; */
+    width: 1200px;
+    margin: 0 auto;
+}
+.relative {
+    position: relative;
+}
+.fl, .left, .left-area {
+    float: left;
+}
+.fr, .right, .right-area {
+    float: right;
+}
+fieldset, img, a img {
+    border: 0 none;
+}
+.breadcrumb-area a, .breadcrumb-area span {
+    color: #666;
+    font-family: \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+}
+.breadcrumb-area a:hover, .breadcrumb-area span {
+    color: #333;
+}
+
+
+
+
+/* 导航 start */
+.shortcut {
+    min-width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f9f9f9;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    position: relative;
+    z-index: 411;
+}
+
+.shortcut .s-sub {
+    float: left;
+}
+.shortcut li{
+	float: left;
+    padding: 0 8px;
+    position: relative;
+}
+.shortcut li:first-child {
+    padding-left: 0;
+}
+.shortcut li:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: #d3d3d3;
+}
+.shortcut a{
+    color: #a4a4a4;
+    font-size: 12px
+}
+.shortcut .s-main {
+    float: right;
+    margin-right: -18px;
+}
+.shortcut li:first-child {
+    padding-left: 0;
+}
+
+/*header*/
+.header {
+    min-width: 1200px;
+    height: 41px;
+    padding: 18px 0 15px 0;
+    background: #fff;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    line-height: 1.5;
+    box-shadow: 0 0 46px rgba(0,0,0,0.03);
+}
+.logo {
+    float: left;
+    margin-right: 34px;
+}
+.logo a {
+    float: left;
+}
+.logo img {
+    height: 36px;
+}
+.naver {
+    float: left;
+    max-width: 560px;
+    height: 40px;
+    overflow: hidden;
+}
+.naver li {
+    float: left;
+    margin-right: 24px;
+}
+.naver a {
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    line-height: 40px;
+    display: block;
+}
+.search-bar {
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+}
+.search-bar .search-bar-form {
+    line-height: 1;
+    width: 320px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    position: relative;
+    z-index: 310;
+}
+.search-bar .search-bar-form .text {
+    border: 0;
+    color: #3a3a3a;
+    width: 290px;
+    text-indent: 15px;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 30px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    float: left;
+}
+.search-bar .search-bar-form .button {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) no-repeat;
+    background-position: 0 -21px;
+    background-color: #666;
+}
+.search-bar .search-bar-key {
+    position: absolute;
+    max-width: 260px;
+    right: 31px;
+    bottom: 6px;
+    z-index: 311;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.search-bar .search-bar-key a {
+    font-size: 12px;
+    margin-right: 14px;
+    color: #CF0A2C;
+}
+
+/*分类列表*/
+.g {
+    width: 1200px;
+    margin: 0 auto;
+    zoom: 1;
+}
+.breadcrumb-area {
+    margin-left: 1px;
+    line-height: 1.5;
+    padding-top: 10px;
+    color: #BBB;
+}
+.breadcrumb-area a, .breadcrumb-area span {
+    color: #666;
+}
+.g:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+/*第二行*/
+.layout {
+    zoom: 1;
+    width: 1200px;
+    margin: 0 auto;
+}
+.layout:before, .layout:after {
+    content: "";
+    display: table;
+}
+.pro-cate-area {
+    border: 1px solid #dedede;
+    font-family: 'Tahoma',"Microsoft Yahei";
+}
+.pro-cate-attr {
+    border-bottom: 1px solid #dedede;
+}
+.pro-cate-area .p-title {
+    float: left;
+    text-align: right;
+    width: 86px;
+    padding-top: 16px;
+}
+.pro-cate-area .p-default {
+    float: left;
+    padding: 16px 0 0 10px;
+}
+#first-category a{
+	color: #00b5e2;
+}
+.pro-cate-area .p-values {
+    margin-left: 140px;
+    padding: 10px 0;
+}
+.pro-cate-area .p-expand {
+    margin-right: 80px;
+    overflow: hidden;
+    height: 30px;
+}
+.pro-cate-area .p-expand li {
+    float: left;
+    margin-right: 20px;
+    padding: 6px 0;
+    height: 18px;
+    white-space: nowrap;
+}
+.pro-cate-area .p-default a, .pro-cate-area .p-expand a {
+    color: #999;
+    display: inline-block;
+}
+
+.hr-20{
+	height: 20px;
+}
+
+/*第三行*/
+.pro-cate-area .p-title {
+    float: left;
+    text-align: right;
+    width: 86px;
+    padding-top: 16px;
+}
+.pro-cate-area .p-expand {
+    margin-right: 80px;
+    overflow: hidden;
+    height: 30px;
+}
+.pro-cate-area .p-expand li {
+    float: left;
+    margin-right: 20px;
+    padding: 6px 0;
+    height: 18px;
+    white-space: nowrap;
+}
+.honor .pro-cate-sort .sort-desc .sort-added s {
+    background-position: 0 -190px;
+}
+.pro-cate-sort .sort-sale, .pro-cate-sort .sort-price, .pro-cate-sort .sort-eval, .pro-cate-sort .sort-added {
+    padding-right: 12px;
+    position: relative;
+}
+.pro-cate-area .p-default a, .pro-cate-area .p-expand a {
+    color: #999;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+}
+.pro-cate-sort .p-expand s {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    width: 8px;
+}
+.pro-cate-sort .sort-sale s, .pro-cate-sort .sort-price s, .pro-cate-sort .sort-added s {
+    background-position: 0 -70px;
+}
+.pro-cate-sort .sort-eval s {
+    background-position: 0 -29px;
+}
+.pro-cate-sort .sort-sale s, .pro-cate-sort .sort-price s, .pro-cate-sort .sort-added s {
+    height: 10px;
+    margin-top: -5px;
+    *margin-top: -6px;
+    _margin-top: -4px;
+}
+.pro-cate-sort .sort-eval s {
+    margin-top: -3px;
+    height: 8px;
+}
+
+/*手机列表*/
+.channel-list {
+    text-align: right;
+
+}
+.channel-list .pro-list {
+    overflow: hidden;
+    width: 1220px;
+    padding-bottom: 20px;
+}
+.channel-list .pro-list li {
+    float: left;
+    width: 20%;
+}
+.channel-list .pro-list .pro-panels {
+    margin: 0 20px 20px 0;
+    border: 1px solid #dedede;
+    height: 362px;
+    position: relative;
+    text-align: center;
+    font-family: 'Tahoma',"Microsoft Yahei";
+    overflow: hidden;
+}
+.channel-list .pro-list .p-img {
+    padding: 38px 0 24px;
+    text-align: center;
+}
+.channel-list .pro-list .p-img img {
+    vertical-align: top;
+    width: 180px;
+    height: 180px;
+}
+.channel-list .pro-list .p-name {
+    line-height: 16px;
+    padding: 0 20px;
+    min-height: 38px;
+    overflow: hidden;
+}
+.channel-list .pro-list .p-name span {
+    display: block;
+    margin-bottom: 5px;
+}
+.honor-blue {
+    color: #00b5e2;
+}
+.channel-list .pro-list .p-price b {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.channel-list .pro-list .p-button {
+    position: absolute;
+    left: -1px;
+    width: 224px;
+    bottom: -1px;
+}
+.channel-list .pro-list .p-button table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.channel-list .pro-list .p-button td {
+    border: 1px solid #dedede;
+}
+.channel-list .pro-list .p-button a, .channel-list .pro-list .p-button label {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.channel-list .pro-list .p-button .p-button-cart{color: skyblue;}
+.channel-list .pro-list .p-tag {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 12px;
+    top: 180px;
+    z-index: 2;
+}
+.pager {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    overflow: hidden;
+}
+
+
+/* 公共底部 */
+.service-container, .slogan-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+}
+.slogan {
+    padding: 22px 0 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.slogan li:first-child {
+    padding-right: 120px;
+}
+.slogan li:first-child+li {
+    padding-right: 120px;
+}
+.slogan li:first-child+li+li {
+    padding-right: 110px;
+}
+.slogan li {
+    float: left;
+}
+.slogan li {
+    display: table-cell;
+    font-size: 18px;
+    color: #333;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.slogan .s1 i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) -358px -207px no-repeat;
+}
+.slogan .s2 i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) -398px -207px no-repeat;
+}
+
+.slogan .s3 i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) -438px -207px no-repeat;
+}
+.slogan .s4 i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) -478px -207px no-repeat;
+}
+.service {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 23px 0 24px;
+    width: 1200px;
+    margin: 0 auto;
+    /* *zoom: 1; */
+}
+.service .service-l {
+    width: 920px;
+    height: 155px;
+    padding-top: 5px;
+    border-right: 1px solid #e5e5e5;
+}
+.service .service-l dl {
+    width: 16.66667%;
+    float: left;
+}
+.service dt {
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.service dt .title {
+    display: block;
+    border-left: none;
+    padding-left: 0;
+    line-height: 1.5!important;
+    margin-bottom: 0!important;
+}
+.service dd li {
+    line-height: 22px;
+    color: #777;
+}
+.service dd a {
+    color: #777;
+    font-size: 12px;
+}
+.service .service-r {
+    width: 279px;
+    min-height: 160px;
+    margin-top: 2px;
+    text-align: center;
+}
+.service .service-r .s7 {
+    width: 279px;
+}
+.service .service-r .title {
+    color: #cb242b;
+    font-weight: bold;
+    font-size: 24px !important;
+    padding: 0;
+    line-height: 24px;
+}
+.service .service-r .s7 dd {
+    font-size: 14px;
+    color: #333;
+}
+.service dd li {
+    line-height: 22px;
+    color: #777;
+}
+.service .s7 dd li a {
+    color: #333;
+}
+.service dd a {
+    color: #777;
+    font-size: 12px;
+}
+.service dd a.service-btn {
+    color: #cb242b;
+}
+.service-btn {
+    display: block;
+    width: 168px;
+    height: 32px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid #cb242b;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    color: #cb242b;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.service-btn i {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) -333px -210px no-repeat;
+}
+.service-code {
+    float: left;
+    width: 250px;
+    margin-top: 26px;
+    margin-left: 40px;
+}
+.service-code h2 {
+    font-size: 14px;
+    color: #333;
+    float: left;
+}
+.service-code ul {
+    float: left;
+    margin-left: 3px;
+}
+.service-code li {
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+    position: relative;
+    float: left;
+    background: url(https://res8.vmallres.com/20181205/images/echannel/icon/icon-header.png?20170620) no-repeat;
+}
+.service-code li.service-code-wechat {
+    background-position: -355px -171px;
+}
+.service-code li.service-code-toutiao {
+    background-position: -403px -171px;
+}
+.service-code li.service-code-sina {
+    background-position: -451px -171px;
+}
+.service-code li.service-code-vmall {
+    background-position: -499px -171px;
+}
+.footer-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+    padding-bottom: 0;
+}
+.footer {
+    padding: 22px 0 22px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.5;
+}
+.footer-warrant-area {
+    text-align: left;
+    color: #a4a4a4;
+    line-height: 20px;
+}
+.footer-warrant-area .footer-warrant-logo {
+    width: 82px;
+    height: 20px;
+    padding: 4px 20px 0 0;
+}
+.footer-warrant-area .footer-warrant-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.footer-warrant-area .footer-warrant-logo img {
+    vertical-align: top;
+    width: 82px;
+    height: 20px;
+}
+.footer-warrant-link li {
+    float: left;
+}
+.footer-warrant-link li a {
+    color: #777;
+    font-size: 12px;
+}
+.footer-warrant-link li i{
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: #d3d3d3;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin: 0 6px;
+}
+.footer-warrant-area a {
+    color: #a4a4a4;
+    font-size: 12px;
+}
+.footer-warrant-area .footer-warrant-img {
+    margin-top: 2px;
+}
+.footer-warrant-area .footer-warrant-img a {
+    display: block;
+    width: 70px;
+    margin-left: 17px;
+    height: 24px;
+}
+.footer-warrant-area .footer-warrant-img img {
+    vertical-align: top;
+    width: 70px;
+    height: 24px;
+}
+.fr, .right, .right-area {
+    float: right;
+}

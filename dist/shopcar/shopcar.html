@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="./css/shopcar.min.css">
+	</head>
+	<body>
+		<div class="sc">
+			<!--shortcut-->
+			<div class="shortcut">
+				<div class="s-sub">
+					<ul>
+						<li><a href="">首页</a></li>
+						<li><a href="">华为官网</a></li>
+						<li><a href="">荣耀官网</a></li>
+						<li><a href="">花粉俱乐部</a></li>
+						<li><a href="">帮助中心</a></li>
+						<li><a href="">V码(优购码)</a></li>
+						<li><a href="">企业购</a></li>
+						<li><a href="">Select Region</a></li>
+						<li><a href="">下载APP</a></li>
+						<li><a href="">更多精彩</a></li>
+					</ul>
+				</div>
+				
+				<div class="s-main">
+					<ul>
+						<li class="register_login">
+							<a href="" class="register">请登录</a>
+							<a href="" class="login">&nbsp;&nbsp;注册</a>
+						</li>
+						<li><a href="">我的订单</a></li>
+						<li>
+							<div class="tool-car">
+								<div class="tool-car-00">
+									<a href="" class="shopping-car">购物车(0)</a>
+								</div>
+								<!--............................
+								<div class="tool-car-01">
+									<!--迷你购物车start
+									<div class="tool-content">
+										<!--购物车为空
+										<div class="tool-empty">
+											<p><span class="icon-minicart"></span></p>
+											<p>您购物车是空的，赶紧选购吧~</p>
+										</div>
+										<!--购物车不为空
+										<div class="full">
+											
+										</div>
+										
+									</div>
+									<!--迷你购物车end
+								</div>-->
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--head部分-->
+			<div class="header order-header">
+				<div class="layout">
+					<div class="left">
+						<div class="logo logo-word">
+							<a href="/" title="华为商城"><img src="https://res.vmallres.com/pimages/temp/product/20170703105852645577.png" alt="华为商城"></a>
+							<span>我的购物车</span>
+						</div>
+					</div> 
+					<div class="right">
+						<div class="progress-area progress-area-3">
+							<div id="progress-cart" class="progress-sc-area">我的购物车</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--head部分结束-->
+			
+			<div class="layout">
+				<div class="hr-20"></div>
+				<div class="sc-list">
+					<div class="sc-pro-title clearfix">
+						<label class="checkbox">
+							<!--单击input添加class checked改变样式-->
+							<input readonly="readonly" class="vam checked"> 全选
+						</label> 
+						<ul class="clearfix">
+							<li>商品</li> <li>单价</li> <li>数量</li> <li>小计</li> <li>操作</li>
+						</ul>
+					</div>
+					<form id="cart-form" method="get" autocomplete="off">
+						<div class="sc-pro">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+    
+        
+        <!-- 公共底部 start -->
+		<!-- slogan start -->
+		<div class="slogan-container">
+			<div class="slogan">
+				<ul class="clearfix">
+					<li class="s1">
+						<a href="">
+							<i></i>百强企业 品质保证
+						</a>
+					</li>
+					<li class="s2">
+						<a href="">
+							<i></i>7天退货 15天换货
+						</a>
+					</li>
+					<li class="s3">
+						<a href="">
+							<i></i>48元起免运费
+						</a>
+					</li>
+					<li class="s4">
+						<a href="">
+							<i></i>1000家维修网点 全国联保
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- servic start -->
+		<div class="service-container">
+			<div class="service clearfix">
+				<div class="service-l fl">
+					<dl class="s1">
+						<dt>
+							<p class="title">购物相关</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">购物指南</a></li>
+								<li><a href="">配送方式</a></li>
+								<li><a href="">支付方式</a></li>
+								<li><a href="">常见问题</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl class="s2">
+						<dt>
+							<p class="title">保修与退换货</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">保修政策</a></li>
+								<li><a href="">退换货政策</a></li>
+								<li><a href="">退换货流程</a></li>
+								<li><a href="">保修状态查询</a></li>
+								<li><a href="">配件防伪查询</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl class="s3">
+						<dt>
+							<p class="title">维修与技术支持</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">售后网点</a></li>
+								<li><a href="">预约维修</a></li>
+								<li><a href="">手机寄修</a></li>
+								<li><a href="">备件价格查询</a></li>
+								<li><a href="">上门服务</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl class="s4">
+						<dt>
+							<p class="title">特色服务</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">防伪查询</a></li>
+								<li><a href="">补购保障</a></li>
+								<li><a href="">以旧换新</a></li>
+								<li><a href="">礼品包装</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl class="s5">
+						<dt>
+							<p class="title">关于我们</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">公司介绍</a></li>
+								<li><a href="">华为商城简介</a></li>
+								<li><a href="">华为线下门店</a></li>
+								<li><a href="">荣耀线下门店</a></li>
+								<li><a href="">诚征英才</a></li>
+								<li><a href="">意见反馈</a></li>
+							</ol>
+						</dd>
+					</dl>
+					<dl class="s6">
+						<dt>
+							<p class="title">友情链接</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">华为集团</a></li>
+								<li><a href="">华为CBG官网</a></li>
+								<li><a href="">荣耀官网</a></li>
+								<li><a href="">花粉俱乐部</a></li>
+								<li><a href="">网站地图</a></li>
+							</ol>
+						</dd>
+					</dl>
+				</div>
+				<div class="service-r fl">
+					<dl class="s7">
+						<dt>
+							<p class="title">400-088-6888</p>
+						</dt>
+						<dd>
+							<ol>
+								<li><a href="">7x24小时客服热线（仅收市话费）</a></li>
+							</ol>
+						</dd>
+						<dd>
+							<a href="" class="service-btn btn-line-primary">
+								<i></i>在线客服
+							</a>
+						</dd>
+					</dl>
+					<div class="service-code clearfix">
+						<h2>关注Vmall：</h2>
+						<ul class="clearfix">
+							<li class="service-code-wechat"></li>
+							<li class="service-code-toutiao"></li>
+							<li class="service-code-sina"></li>
+							<li class="service-code-vmall"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer start -->
+		<div class="footer-container">
+			<div class="footer">
+				<div class="footer-warrant-area clearfix">
+					<p class="footer-warrant-logo fl">
+						<a href=""><img src="https://res.vmallres.com/pimages//template/content/2018/HBHfAUYHLA0u5qMS8Nkr.png" alt=""></a>
+					</p>
+					<div class="fl">
+						<ul class="footer-warrant-link clearfix">
+							<li><a href="">华为集团</a><i></i></li>
+							<li><a href="">华为CBG官网</a><i></i></li>
+							<li><a href="">荣耀官网</a><i></i></li>
+							<li><a href="">花粉俱乐部</a><i></i></li>
+							<li><a href="">华为应用市场</a><i></i></li>
+							<li><a href="">EMUI</a><i></i></li>
+							<li><a href="">华为终端云空间</a><i></i></li>
+							<li><a href="">开发者联盟</a><i></i></li>
+							<li><a href="">华为商城手机版</a><i></i></li>
+							<li><a href="">网站地图</a></li>
+						</ul>
+						<a href="">隐私声明</a>
+						<a href=""> 服务协议</a>
+						<a href=""> Copyright © 2012-2018 华为软件技术有限公司 版权所有 保留一切权利</a>
+						<br>
+						<a href="">公安备案</a>
+						<a href="">苏公网安备32011402010009号</a>
+						<a href="">苏ICP备17040376号-6</a>
+						<br>
+						<a href=""> 增值电信业务经营许可证：苏B2-20130048号</a>
+						<a href="">网络文化经营许可证：苏网文[2015] 1599-026号</a>
+					</div>
+					<p class="fr footer-warrant-img">
+						<a href="" class="fl"><img src="https://res.vmallres.com/pimages//sale/2018-05/20180522101715775.jpg" alt=""></a>
+						<a href="" class="fl"><img src="https://res.vmallres.com/pimages//template/content/2016/20160226162415360.png" alt=""></a>
+						<a href="" class="fl"><img src="https://res.vmallres.com/pimages//template/content/2016/20160226162521265.png" alt=""></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="./js/shopcar.min.js"></script>
+
+	</body>
+</html>
+

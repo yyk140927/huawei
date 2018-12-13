@@ -24,18 +24,18 @@ const config = {
                 './src/views/index/stylesheets/*.css'
             ]
         },
-        // 'list': {
-        //     'list': [
-        //         './src/stylesheets/reset.css',
-        //         './src/views/list/stylesheets/*.css'
-        //     ]
-        // },
-        // 'shopcar': {
-        //     'shopcar':[
-        //         './src/stylesheets/reset.css',
-        //         './src/views/shopcar/stylesheets/*.css'
-        //     ]
-        // },
+        'list': {
+            'list': [
+                './src/stylesheets/reset.css',
+                './src/views/list/stylesheets/*.css'
+            ]
+        },
+        'shopcar': {
+            'shopcar':[
+                './src/stylesheets/reset.css',
+                './src/views/shopcar/stylesheets/*.css'
+            ]
+        },
         'login': {
             'login': [
                 './src/stylesheets/reset.css',
@@ -48,20 +48,20 @@ const config = {
                 './src/views/register/stylesheets/*.css'
             ]
         },
-        // 'details': {
-        //     'details': [
-        //         './src/stylesheets/reset.css',
-        //         './src/views/details/stylesheets/*.css'
-        //     ]
-        // }
+        'details': {
+            'details': [
+                './src/stylesheets/reset.css',
+                './src/views/details/stylesheets/*.css'
+            ]
+        }
     },
     jsoptions: {// js配置
         'index': './src/views/index/javascripts/index.js',
-        // 'list': './src/views/list/javascripts/list.js',
+        'list': './src/views/list/javascripts/list.js',
         'register': './src/views/register/javascripts/register.js',
         'login': './src/views/login/javascripts/login.js',
-        // 'details': './src/views/details/javascripts/details.js',
-        // 'shopcar': './src/views/shopcar/javascripts/shopcar.js',
+        'details': './src/views/details/javascripts/details.js',
+        'shopcar': './src/views/shopcar/javascripts/shopcar.js',
     }
 } 
 
