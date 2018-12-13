@@ -8,116 +8,57 @@
     <link rel="stylesheet" href="./css/register.min.css">
 </head>
 <body>
-    <!--header部分-->
-    <div class="head">
+    <div class="head-background">
         <div class="head_center">
-            <div class="main-logo adHeadPicContainer" style="width:143px"><img src="../images/head-top.png" class="wihteBgPic"> </div>
-            <div class="website-name">
-                <b>|</b><b>华为商城</b>
+            <div class="logo">
+                <img src="https://hwid1.vmall.com/CAS/up/idmw_rss_24/logos/head-top.png" alt="">
+            </div>
+            <div class="webname">
+                <b style="font-size: 18px;margin-top: -5px;float: left;color:#cccccc;">|</b>
+                <b style="font-size: 18px;margin-top: -3px;float: left; margin-left:18px; font-weight: normal" >华为商城</b>
             </div>
         </div>
     </div>
-    
-    <div class="wq1 relative">
-        <div class="register-content" id="registerform">
-            <div class="reg-tab">
-                <a href="" class="phone-wrap sel">
-                    <i class="phone-icon"></i>
-                    <span id="tabPhone" class="tab-phone">手机号</span>
-                </a>
-                <a href="" class="mail-wrap">
-                    <i class="mail-icon"></i>
-                    <span id="tabMail" class="tab-email">电子邮箱</span>
-                </a>
-            </div>
-            <div class="login r">
-                已有华为帐号
-                <a href="../login/login.html" class="login-a" title="登录">登录</a><span class="ar-eg-opposite">&gt;</span>
-            </div>
-            
-            <div class="reg-detail">
-                <!--选择国家-->
-                <div class="input-container" id="chooseCountry">
-                    <div class="input-left">
-                        国家 / 地区
-                    </div>
-                    <div class="input-content">
-                        <div class="node-input ddrop-EMU5" id="selectCountryImg" style="overflow: visible;">
-                            <span class="select-text ar-eg">中国</span>
-                            <span class="suffix" style="color: rgb(51, 51, 51);"></span>
-                            <div class="select-ico" id="select_ico"></div>
-                            <ul class="dpmenu-EMU5 dpmenu-EMUI5-down" id="country_selecter" tabindex="0">
-                                <div class="flow-top"></div>
-                                <li class="dropListEMUI5_li">阿尔巴尼亚</li>
-                                <div class="uc-line" style="width:151px"><div></div></div>
-                                <li class="dropListEMUI5_li">阿富汗</li>
-                                <div class="uc-line" style="width:151px"><div></div></div>
-                                <li class="dropListEMUI5_li">新加坡</li>
-                                <div class="uc-line" style="width:151px"><div></div></div>
-                                <li class="dropListEMUI5_li">印度</li>
-                                <div class="uc-line" style="width:151px"><div></div></div>
-                            </ul>
-                        </div>
-                        <div id="selectedCountry" style="display: none;">中国</div>
-                    </div>
-                </div>
-                <!--手机号码-->
-                <div class="input-container">
-                    <div class="l input-left">
-                        <div id="input_languageCode" class="ddrop-EMU5">
-                            <span class="select-text ar-eg">+86(中国)</span>
-                            <span class="suffix" style="color: rgb(51, 51, 51);"></span>
-                            <div class="select-ico select-ico-gray"></div>
-                        </div>
-                    </div>
-                    <div class="input-content">
-                        <input id="tel" type="number" class="text vam" placeholder="请输入手机号">
-                    </div>
-                </div>
-                <!--设置密码-->
-                <div class="set-password">
-                    <div class="input-container">
-                        <div class="l input-left">
-                            密码
-                        </div>
-                        <div class="input-content">
-                            <input type="password" class="pwd-input text" id="password" placeholder="请输入密码">
-                        </div>
-                        
-                    </div>
-                    <div class="input-container">
-                        <div class="l input-left">
-                            确认密码
-                        </div>
-                        <div class="input-content">
-                            <input id="confirmPwd" type="password" class="text vam" placeholder="请再次输入密码">
-                        </div>
-                    </div>
-                    
-                    <!--按钮-->
-                    <div class="reg-btn" align="center">
-                        <input type="button" class="btn btn-reg sel" id="btnSubmit" value="注册">
-                        <div id="register_msg"></div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="box-shadow"></div>
-        </div>
+    <div class="wp1">
         
-        <!--底部-->
-        <div class="wp1 ft">
-            <div class="reg-content">
-                <p class="footer">
-                    <a id="foot_EULA" href="" class="rule">华为帐号用户协议</a>
-                    <em class="foot_em">|</em>
-                    <a id="foot_privacy" class="rule" >关于华为帐号与隐私的声明</a>
-                    <span id="faqPart" class="foot_em"><em style="font-style: normal">|</em> <a style="padding:0 10px;" target="blank">常见问题</a></span>
+        <div class="content">
+            <div class="top clearfix">
+                <a href=""><i class="phone-icon"></i><span>手机号</span></a>
+                <a href=""><i class="mail-icon"></i><span>电子邮箱</span></a>
+                <a href="">已有账号登录</a>
+            </div>
+            <div class="phone">
+                <span>手&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;&nbsp;号:</span>
+                <input type="text" placeholder="请输入正确手机号" id="username">
+                <div id="phonemsg"></div>
+            </div>
+            <div class="pwd">
+                <span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</span>
+                <input type="password" placeholder="请输入密码" id="userpwd">
+                <div id="pwdmsg"></div>
+            </div>
+            <div class="conpwd">
+                <span>确&nbsp;认&nbsp;密&nbsp;码:</span>
+                <input type="password" placeholder="请再次输入密码" id="conuserpwd">
+                <div id="conpwdmsg"></div>
+            </div>
+            <!-- <a href="" class="reg">注册</a> -->
+            <button class="reg" id="register">注册</button>
+        </div>
+        <div class="footer">
+            <div class="footer-contain">
+                <p>
+                    <a href="">华为帐号用户协议</a>
+                    <a href="">关于华为帐号与隐私的声明</a>
+                    <a href="">常见问题</a>
                 </p>
-                    <p id="copyrightPart" class="footer">Copyright&nbsp;©&nbsp;2011-2018&nbsp;&nbsp;华为软件技术有限公司&nbsp;&nbsp;版权所有&nbsp;&nbsp;保留一切权利&nbsp;&nbsp;苏B2-20070200号&nbsp;|&nbsp;苏ICP备09062682号-9</p>	
+                <p class="copyrightPart">
+                        Copyright © 2011-2018  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9
+                </p>
             </div>
         </div>
     </div>
+
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="./js/register.min.js"></script>
 </body>
