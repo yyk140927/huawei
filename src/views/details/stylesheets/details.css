@@ -1,6 +1,6 @@
 body,div,span,a,ul,ol,li,p,h1,h2,h3,h4,h5,h6,input,dl,dt,dd{margin:0;padding:0}
 h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: 400;}
-div{diaplay:block}
+div{display:block}
 body{background: #FFF;}
 ol,ul{list-style: none;}
 a{text-decoration: none;cursor: pointer;color: #3a3a3a;}
