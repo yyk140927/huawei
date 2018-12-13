@@ -1,56 +1,69 @@
-//放大镜
-$("#mark").mouseenter(function(){
-	$("#slider").css("display","block");
-	$("#bigbox").css("display","block");
-})
-$("#mark").mouseleave(function(){
-	$("#slider").css("display","none");
-	$("#bigbox").css("display","none");
-})
-$("#mark").mousemove(function(evt){
-	var e=evt||window.event;
-	var left=e.pageX-$("#smallbox").offset().left-$("#slider").width()/2;
-	var top=e.pageY-$("#smallbox").offset().top-$("#slider").height()/2;
-	//console.log("left:::"+left,"top:::"+top)
-	if(left<=0){
-		left=0;
-	}else if(left>$("#smallbox").width()-$("#slider").width()){
-		left=$("#smallbox").width()-$("#slider").width();
+$(function(){
+	$("#exzoom").exzoom({
+	    "navWidth": 66,//列表每个宽度,该版本中请把宽高填写成一样
+	    "navHeight": 66,//列表每个高度,该版本中请把宽高填写成一样
+	    "navItemNum": 5,//列表显示个数
+	    "navItemMargin": 7,//列表间隔
+	    "navBorder": 0,//列表边框，没有边框填写0，边框在css中修改
+	    "autoPlay": false,//是否自动播放
+	    "autoPlayTimeout": 2000,//播放间隔时间
+	});
+	
+	$(".product-button01").click(function(){
+		let val = $(".product-stock-text").val()*1
+		let good = {good_name: "荣耀8X", good_img: "../images/428_428_1537234343259mp.jpg", good_price: 2999, good_num: val}
+		let goods = Get_cookie();
+		// 判断购物车中有没有这个商品，有的话数量+1，没有的话，加入整个商品
+        let has = goods.some(item => {
+            if ( item.good_name === good.good_name ) { // 有这个商品
+                item.good_num += good.good_num || val; // 操作该商品的数量
+                return true;
+            }
+            return false;
+        });
+        if ( !has ) { // 如果没有这个商品
+            goods.push(good)
+        }
+        goods = JSON.stringify(goods)
+        console.log(goods)
+        save_cookie(goods)		//最后存入cookie
+        alert("成功加入购物车")
+		
+	})
+	
+	$("#pro-quantity-plus").click(function(){		//增加
+		let $item = $("#pro-quantity").val()
+		$("#pro-quantity").val(++$item)
+	})
+	
+	$("#pro-quantity-minus").click(function(){		//减少
+		let $item = $("#pro-quantity").val()
+		if($item<=1)return false;
+		$item--
+		$("#pro-quantity").val($item)
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function Get_cookie(){		//取出cookie
+		let goods_str = $.cookie('goods') ||'[]' 
+        return JSON.parse(goods_str);
 	}
-	if(top<=0){
-		top=0;
-	}else if(top>$("#smallbox").height()-$("#slider").height()){
-		top=$("#smallbox").height()-$("#slider").height();
+	
+	function save_cookie(good){	//保存cookie
+		$.cookie('goods',good,{ path: '/'})
 	}
-	$("#slider").css("left",left);
-	$("#slider").css("top",top);
-	var Px=left/($("#smallbox").width()-$("#slider").width());
-	var Py=top/($("#smallbox").height()-$("#slider").height());
-	$("#bigbox").css("left",-Px*($("#bigbox").width()-$("#bigbox").width()));
-	$("#bigbox").css("top",-Py*($("#bigbox").height()-$("#bigbox").height()))
+	
+	
+	
+	
 })
-//小图轮播
-//console.log($(".desmlmove li").length);
-//console.log($("smallbox img").length,$(".desmlmove li").length);
-var index=0;
-$("#smallbox img").eq(index).css("display","block");
-$("#bigbox img").eq(index).css("display","block");
-$(".minibox_ li").mouseenter(function(){
-	index=$(this).index();
-	$(".minibox_ li").find("a").each(function(){
-		$(this).css("borderColor","#fff");
-	})
-	$(".minibox_ li").find("a").eq(index).css("borderColor","#CA141D")
-	$("smallbox img").each(function(){
-		$(this).css("display","none");
-	})
-	$("smallbox img").eq(index).css("display","block");
-	$("#bigbox img").each(function(){
-		$(this).css("display","none");
-	})
-	$("#bigbox img").eq(index).css("display","block");
-});
-$(".minibox_ li").mouseleave(function(){
-	//index=$(this).index();
-	$(".minibox_ li").find("a").eq(index).remove("click");
-})
+
+

@@ -60,7 +60,9 @@ const config = {
         'list': './src/views/list/javascripts/list.js',
         'register': './src/views/register/javascripts/register.js',
         'login': './src/views/login/javascripts/login.js',
-        'details': './src/views/details/javascripts/details.js',
+        'details': ['./src/views/details/javascripts/details.js',
+                    './src/views/details/javascripts/jquery.exzoom.js'],
+
         'shopcar': './src/views/shopcar/javascripts/shopcar.js',
     }
 } 
