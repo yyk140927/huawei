@@ -18,12 +18,11 @@ $(document).ready(function(){
                 pwd = arr[j].pwd
             }
         }
-        console.log(pwd)
+        // console.log(pwd)
         if(str == ""){
             alert("不能为空")
         }else if(ret.test(str)){
             if($.inArray(str,unames) == -1){
-            
                 alert("未注册")
                 flagName = false;
             }		   
@@ -36,9 +35,7 @@ $(document).ready(function(){
     })
     //登录事件
     $("#btnLogin").click(function(){
-        
         if( flagName &&  $("#login_userName").val() == username && $("#login_password").val() == pwd ){
-            
             alert("登录成功,即将跳转首页")
             window.location.href = "../../index/index.html";
         }else{

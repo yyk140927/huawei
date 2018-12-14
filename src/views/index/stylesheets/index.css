@@ -6,6 +6,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
     font-weight: 400;
 }
+a:hover{
+    color: #cb242b !important;
+}
 .minicart-pro-empty .icon-minicart, .hungBar a, .shortcut .dropdown-code .code-info span, .i-mall-huaban li .p-img span, .minicart-pro-item .p-choose i, .search-bar .search-bar-form .button, .search-bar .search-bar-key a .icon-fire, .hot-board-index .ec-slider-middle .button-slider-prev, .hot-board-index .ec-slider-middle .button-slider-next, .home-recommend-goods .special-title .title, .shortcut .s-dropdown .icon-minicart:before, .shortcut .dropdown-navs .dropdown-navs-icon:before, .i-mall-prompt .user-info .user-info-detail a:before, .minicart-pro-item .p-tags:before {
     background: url(https://res.vmallres.com/20181205/images/echannel/icon/icon-header.png) no-repeat;
 }
@@ -398,6 +401,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 9px;
     font-size: 14px;
 }
+.mask{
+    width: 700px;
+    height: 440px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 18px;
+    left: 200px;
+    border-radius: 10px;
+    display: none;
+}
+.mask img{
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+
+
+
 
 /* 轮播图 */
 .container {

@@ -6,7 +6,7 @@ $(document).ready(function(){
     var pwdmsg = $("#pwdmsg")
     var conpwdmsg = $("#conpwdmsg");
     var register = $("#register");
-    var regphone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+    var regphone = /^[1][3,4,5,7,8][0-9]{9}$/;
     var regpwd = /^[a-zA-Z]\w{5,17}$/
     // (以字母开头，长度在6~18之间，只能包含字母、数字和下划线)
     username.blur(function(){
@@ -39,36 +39,6 @@ $(document).ready(function(){
             conpwdmsg.html("正确")
         }
     })
-
-    //点击注册按钮
-    // register.on("click",function(){
-    //     // console.log((username).val())
-    //     if(username.val() && userpwd.val()){
-    //         var flag = true;
-    //         var arr = [];
-    //         var json = {
-    //             "name" : username.val(),
-    //             "pwd" :  userpwd.val()
-    //         }
-    //         var brr = getCookie("userlist");
-    //         if(brr.length != 0){
-    //             arr = brr;
-    //             for(var i=0; i<arr.length; i++){
-    //                 if(json.name == arr[i].name){
-    //                     flag = false;
-    //                 }
-    //             }
-    //         }
-    //         if(flag){
-    //             arr.push(json);
-    //         }
-    //         setCookie("userlist",JSON.stringify(arr));
-    //         alert("注册成功,正在前往登录页面...")
-    //         location.href = "../../login/login.html"
-    //     }else{
-    //         alert("请正确输入")
-    //     }
-    // })
 
     var arr = [];
     register.click(function(){

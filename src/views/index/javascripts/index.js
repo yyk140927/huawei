@@ -1,6 +1,7 @@
 $(document).ready(function(){
     Switch.init();
     slide();
+    renderMask();
 });
 
 //获取json数据
@@ -418,6 +419,15 @@ function slide(){
 
 // 以上是轮播图
 
-
+function renderMask(){
+    $(".category-title a").hover(  
+        function(){
+            $(".mask").css("display","block")
+        },
+        function(){
+            $(".mask").css("display","none")
+        }
+    )
+}
 
 
