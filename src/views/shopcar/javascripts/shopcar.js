@@ -47,7 +47,7 @@ $(function(){
 								</a>
 								<ul>
 									<li><a class="p-name">${good_name}</a></li>
-									<li><div class="p-price"><span>¥&nbsp;${good_price}</span><s>¥&nbsp;9999</s></div></li>
+									<li><div class="p-price"><span>¥&nbsp;${good_price}</span><s></s></div></li>
 									<li>
 										<div class="p-stock">
 											<div class="p-stock-area">
@@ -58,7 +58,7 @@ $(function(){
 											</div>
 										</div>
 									</li>
-									<li class="p-price-total">¥&nbsp;${good_price}<span class="p-price-save">¥&nbsp;0</span></li>
+									<li class="p-price-total">¥&nbsp;${good_price}<span class="p-price-save"></span></li>
 									<li><a href="javascript:;" class="p-del">删除</a></li>
 								</ul>
 							</div>

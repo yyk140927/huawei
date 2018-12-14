@@ -84,54 +84,11 @@ address, caption, cite, code, dfn, em, th, var {
 	padding: 0 18px 0 12px;
 }
 
-/*li.tool-car:hover{
-	margin: 0 10px;
-	box-shadow: 0 2px 6px 0 rgba(121,121,121,0.26);
-}
-.tool-car:hover .tool-car-00{
-	border: 1px solid #ebebeb;
-	border-bottom: 1px solid #fff;
-	background: #fff;
-	background-color: #fff;
-	z-index: 100;
-}
-.tool-car:hover .tool-car-01{
-	display: block;
-	
-}
-.tool-car-01{
-	display: none;
-	position: absolute;
-    top: 30px;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ededed;
-    box-shadow: 0 2px 6px 0 rgba(121,121,121,0.26);
-}*/
-/*空购物车*/
-/*.tool-empty{
-	display:none;
-	padding: 50px 0;
-	width: 460px;
-    text-align: center;
-    line-height: 1;
-    font-size: 14px;
-    color: #a4a4a4;
-}
-
-.icon-minicart{
-	background: url(../../images/icon-header-minicart.png) no-repeat;
-	width: 100px;
-	height: 100px;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 16px;
-} */
-
 
 /*header*/
 .header{
-	width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
 	height: 50px;
 	padding: 10px 0;
 	background: #FFFFFF;

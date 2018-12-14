@@ -31,7 +31,7 @@ var Switch = {
         res.hotGoods.forEach(item => {
             strHot +=  `
                         <li class="grid-items">
-                            <a href="javascript:;" class="thumb">
+                            <a href="../../list/list.html" class="thumb">
                                 <p class="grid-img"><img src="${item.img}" alt=""></p>
                                 <div class="grid-title">${item.title}</div>
                                 <p class="grid-desc">${item.desc}</p>
@@ -46,7 +46,7 @@ var Switch = {
         res.recommendGoods.forEach(item => {
             strRec +=  `
                         <li class="grid-items">
-                            <a href="javascript:;" class="thumb">
+                            <a href="../../list/list.html" class="thumb">
                                 <div class="grid-info">
                                     <p class="grid-img"><img src="${item.img}" alt=""></p>
                                     <p class="grid-desc">${item.desc}</p>
@@ -72,7 +72,7 @@ var Switch = {
             }else{
                 strPhone += `
                             <li class="grid-items">
-                                <a href="javascript:;" class="thumb">
+                                <a href="../../list/list.html" class="thumb">
                                     <div class="grid-info">
                                         <p class="grid-img">
                                             <img src="${item.img}" alt="">
@@ -101,7 +101,7 @@ var Switch = {
             }else{
                 strNotebook +=  `
                                 <li class="grid-items">
-                                    <a href="javascript:;" class="thumb">
+                                    <a href="../../list/list.html" class="thumb">
                                         <div class="grid-info">
                                             <p class="grid-img">
                                                 <img src="${item.img}" alt="">
@@ -130,7 +130,7 @@ var Switch = {
             }else{
                 strTablets +=  `
                                 <li class="grid-items">
-                                    <a href="javascript:;" class="thumb">
+                                    <a href="../../list/list.html" class="thumb">
                                         <div class="grid-info">
                                             <p class="grid-img">
                                                 <img src="${item.img}" alt="">
@@ -159,7 +159,7 @@ var Switch = {
             }else{
                 strWear += `
                             <li class="grid-items">
-                                <a href="" class="thumb">
+                                <a href="../../list/list.html" class="thumb">
                                     <div class="grid-info">
                                         <p class="grid-img">
                                             <img src="${item.img}" alt="">
@@ -206,7 +206,7 @@ var Switch = {
             }else{
                 strHome += `
                             <li class="grid-items">
-                                <a href="" class="thumb">
+                                <a href="../../list/list.html" class="thumb">
                                     <div class="grid-info">
                                         <p class="grid-img">
                                             <img src="${item.img}" alt="">
@@ -253,7 +253,7 @@ var Switch = {
             }else{
                 strParts += `
                             <li class="grid-items">
-                                <a href="" class="thumb">
+                                <a href="../../list/list.html" class="thumb">
                                     <div class="grid-info">
                                         <p class="grid-img">
                                             <img src="${item.img}" alt="">
@@ -300,7 +300,7 @@ var Switch = {
             }else{
                 strBrandParts += `
                             <li class="grid-items">
-                                <a href="" class="thumb">
+                                <a href="../../list/list.html" class="thumb">
                                     <div class="grid-info">
                                         <p class="grid-img">
                                             <img src="${item.img}" alt="">
@@ -336,6 +336,7 @@ var Switch = {
     }
 }
 
+// 轮播图
 function slide(){
     var index = 0; 
     // 选中所有的图片;
@@ -417,8 +418,7 @@ function slide(){
     setInterval('$("#right").trigger("click")', 3000)
 }
 
-// 以上是轮播图
-
+// 侧边栏
 function renderMask(){
     $(".category-title a").hover(  
         function(){
@@ -429,5 +429,4 @@ function renderMask(){
         }
     )
 }
-
 

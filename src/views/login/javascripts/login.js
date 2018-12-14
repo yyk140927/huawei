@@ -12,7 +12,7 @@ $(document).ready(function(){
     var pwd = null,username = null;
     $("#login_userName").blur(function(){
         var str = $("#login_userName").val();
-        var ret = /^[1][3,4,5,7,8][0-9]{9}$/;
+        var ret = /^[1][3,4,5,6,7,8][0-9]{9}$/;
         for(var j = 0 ; j < arr.length;j++){
             if(str == arr[j].name){
                 pwd = arr[j].pwd

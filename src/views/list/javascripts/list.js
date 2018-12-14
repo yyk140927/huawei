@@ -6,7 +6,7 @@ $(function(){
             url:"../data/list.json",
             success: (data) => {
                 renderBannerItem(data)  //商品列表
-                MouseLi(data)
+                // MouseLi(data)
                 /*getHeadList(data)			//下拉商品列表标题
                 getHeadImg(data)	*/		//下拉商品图片
             }
@@ -52,21 +52,7 @@ $(function(){
     	})
     }
 	
-	function getHeadList(res){//下拉商品列表
-    	let strHead = ''
-    	res.sidebar.forEach(item => {
-    		strHead += `
-				<li class="grid-items"><a class="thumb">
-				<p class="grid-img">
-				<img src="../images/${item.img}"></p>
-				<div class="grid-title">${item.title}</div>
-				<p class="grid-price">￥${item.price}</p>
-				</a></li>
-			`
-    	})
-    	$(".grid-list").html(strHead)
-
-    }
+	
 	
 	function MouseLi(data){
     	$("#naveList li").on("mouseenter",function(){
